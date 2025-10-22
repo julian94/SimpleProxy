@@ -1,0 +1,12 @@
+<Project>
+    <!--
+    Special build customization folder, used to avoid building into the source directories
+    See https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022
+    -->
+    <PropertyGroup>
+        <BaseOutputPath>$(MSBuildThisFileDirectory)/_build/$(MSBuildProjectName)/bin/</BaseOutputPath>
+        <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)/_build/$(MSBuildProjectName)/obj/</BaseIntermediateOutputPath>
+        <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+        <RunSettingsFilePath>$(MSBuildThisFileDirectory)/.runsettings</RunSettingsFilePath>
+    </PropertyGroup>
+</Project>

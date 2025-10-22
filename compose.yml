@@ -1,0 +1,9 @@
+services:
+  yarp:
+    image: simpleproxy
+    build: .
+    volumes:
+      - ./appSettings.json:/app/appSettings.json:ro
+      - ./certificate/keys:/app/keys:ro
+    restart: 'unless-stopped'
+    network_mode: host
