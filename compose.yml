@@ -1,6 +1,6 @@
 services:
   yarp:
-    image: simpleproxy
+    image: simpleproxy:v1
     build: .
     volumes:
       - ./appSettings.json:/app/appSettings.json:ro
