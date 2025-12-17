@@ -1,6 +1,6 @@
 services:
   simple-proxy-dev:
-    image: simpleproxy:1.2.0
+    image: simpleproxy:1.2.1
     build: .
     volumes:
       - ./appSettings.json:/app/appSettings.json:ro

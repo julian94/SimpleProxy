@@ -20,12 +20,13 @@ var app = builder.Build();
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
+app.UseDefaultFiles();
 app.UseStaticFiles(new StaticFileOptions()
 {
     ServeUnknownFileTypes = true,
     DefaultContentType = "text/plain",
 });
-
+//app.UseDefaultFiles();
 
 app.MapReverseProxy();
 
