@@ -1,9 +1,12 @@
 services:
-  yarp:
-    image: simpleproxy:1.1.1
+  simple-proxy-dev:
+    image: simpleproxy:1.2.0
     build: .
     volumes:
       - ./appSettings.json:/app/appSettings.json:ro
       - ./certificate/keys:/app/keys:ro
+      - ../../public_html/:/app/wwwroot:ro
     restart: 'unless-stopped'
-    network_mode: host
+    #network_mode: host
+    ports:
+     - 3000:80
